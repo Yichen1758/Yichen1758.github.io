@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="设计并实现 88–108 MHz 自动搜索接收机，在 430 mA 供电电流下用 4 秒完成载波搜索、调制方式识别与解调输出。">
+  <meta name="color-scheme" content="light">
+  <title>2025年电子设计大赛：简易自动接收机 · 个人履历与成果集</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body><main class="detail-page">
+  <header class="site-header shell"><a class="wordmark" href="/">PORTFOLIO<span>返回首页</span></a><nav><a href="/">← 全部经历</a></nav></header>
+  <article class="detail shell"><div class="detail-intro"><p class="eyebrow">竞赛经历</p><h1>2025年电子设计大赛：简易自动接收机</h1><p>简易自动接收机</p></div>
+    <div class="detail-facts"><div><span>时间</span><strong>2025.09—2025.12</strong></div><div><span>组织</span><strong>2025年电子设计大赛</strong></div><div><span>角色</span><strong>核心成员｜硬件调试、算法实现与电源模块设计</strong></div></div>
+    <div class="detail-hero cover-electronic-design-2025 has-image"><img src="/media/electronic-design-receiver.png" alt="2025年电子设计大赛：简易自动接收机相关图片"><span>竞赛经历</span></div>
+    <div class="detail-body"><aside><p>关键词</p><span>电子设计</span><span>射频接收</span><span>STM32H743</span><span>FFT</span><span>PCB设计</span></aside><div><h2>经历概述</h2><p class="lead">设计并实现 88–108 MHz 自动搜索接收机，在 430 mA 供电电流下用 4 秒完成载波搜索、调制方式识别与解调输出。</p><p>项目要求制作一台能够自动搜索并接收 88 MHz–108 MHz 频率范围内、载波电平低至 -95 dBm 的调频或调幅信号，自动识别调制方式并解调输出；响应时间小于 5 秒，最大供电电流小于 500 mA。</p><p>系统采用两级 ERA-6SM+ 低噪声放大器初步放大小信号，由 LMX2571 锁相环提供本振信号；两路信号经 AD835 乘法器混频后，通过 10.7 MHz 带通滤波器，再由 OPA690 与直流偏置电路放大并送入 STM32H743。ADC 以 409.6 kHz 采样，控制 LMX2571 按 100 kHz 间隔扫描频点、识别载波并去除直流分量；随后利用 FFT 频谱识别调制方式，经希尔伯特变换生成正交信号，完成数字解调和双二阶滤波，输出解调信号供示波器观察。</p><p>实际测试中，系统供电电流为 430 mA，响应时间为 4 秒；能够解调调制度 30%–60% 的调幅信号，以及最大频偏 5 kHz–75 kHz 的调频信号。</p><p>本人负责 LMX2571 锁相环、ERA-6SM+ 低噪声放大器和 AD835 乘法器的选型与稳定性调试；负责 LMX2571 载波识别、FFT 频谱分析和数字解调算法实现；同时负责输入 2V–9V、输出 +5V、+3.3V、GND、-3.3V 电源模块的原理图与 PCB 设计。</p></div></div>
+    <section class="static-media" aria-labelledby="media-title"><div class="detail-section-heading"><p class="eyebrow">MEDIA &amp; EVIDENCE</p><h2 id="media-title">影像与成果材料</h2><p>以下照片、图示、证明与视频均归档在本段经历中，可逐项查看。</p></div><div class="media-grid"><figure><img loading="lazy" src="/media/electronic-design-description.webp" alt="简易自动接收机项目指标、实现路径与个人职责说明"><figcaption>简易自动接收机项目指标、实现路径与个人职责说明</figcaption></figure><figure><video controls preload="metadata" src="/media/electronic-design-demo.mp4">你的浏览器暂不支持视频播放。</video><figcaption>简易自动接收机实验室联调与波形观测</figcaption></figure></div></section>
+    <div class="detail-back"><a href="/">← 返回全部经历</a></div>
+  </article></main></body>
+</html>

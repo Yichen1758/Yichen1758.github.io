@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="打通波形生成、自定义串口协议、CRC16 校验、数据回传与 Python GUI 可视化的完整链路。">
+  <meta name="color-scheme" content="light">
+  <title>基于 AT32F403A 的全链路嵌入式示波器系统 · 个人履历与成果集</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body><main class="detail-page">
+  <header class="site-header shell"><a class="wordmark" href="/">PORTFOLIO<span>返回首页</span></a><nav><a href="/">← 全部经历</a></nav></header>
+  <article class="detail shell"><div class="detail-intro"><p class="eyebrow">项目作品</p><h1>基于 AT32F403A 的全链路嵌入式示波器系统</h1><p>嵌入式 + 上位机协同开发</p></div>
+    <div class="detail-facts"><div><span>时间</span><strong>2026.02—2026.02</strong></div><div><span>组织</span><strong>中科海豚芯锐（广州）科技有限公司 · 实习项目</strong></div><div><span>角色</span><strong>独立开发｜下位机、通信协议与 Python 上位机</strong></div></div>
+    <div class="detail-hero cover-embedded-oscilloscope-at32f403a"><span>项目作品</span><small>能力与成果记录</small></div>
+    <div class="detail-body"><aside><p>关键词</p><span>AT32F403A</span><span>USART</span><span>CRC16</span><span>Python GUI</span><span>Matplotlib</span></aside><div><h2>经历概述</h2><p class="lead">打通波形生成、自定义串口协议、CRC16 校验、数据回传与 Python GUI 可视化的完整链路。</p><p>系统由 AT32F403A 下位机与 Python 上位机组成。上位机配置参数并通过 USART 发送自定义协议指令；下位机在中断中接收数据，依据帧头、帧尾与 CRC16 校验指令完整性和准确性，再按参数生成波形并回传采样数据。</p><p>上位机解析串口数据后通过 GUI 展示波形。通信层采用环形缓冲区、指令帧校验、CRC16 与参数校验的双重保护；性能层采用下位机中断接收与定时发送、上位机子线程串口通信和 Matplotlib 局部重绘，避免界面卡顿。</p><p>该项目将硬件底层、通信协议、软件 UI 和数据可视化解耦，形成职责清晰、便于调试和扩展的全链路实现。</p></div></div>
+    
+    <div class="detail-back"><a href="/">← 返回全部经历</a></div>
+  </article></main></body>
+</html>
